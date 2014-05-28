@@ -5,7 +5,7 @@ define(function(require, exports, module) {
     var Transform = require("famous/core/Transform");
     var View = require('famous/core/View');
 
-    var number = 3;
+    var number = 5;
     var surfaceWidth = 100; //window.innerWidth;
     var viewDeg = 0;
     var Degree = 2*Math.PI/360;
