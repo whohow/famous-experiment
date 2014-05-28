@@ -5,7 +5,7 @@ define(function(require, exports, module) {
     var Transform = require("famous/core/Transform");
     var View = require('famous/core/View');
 
-    var number = 5;
+    var number = 10;
     var surfaceWidth = 100; //window.innerWidth;
     var viewDeg = 0;
     var Degree = 2*Math.PI/360;
@@ -17,7 +17,7 @@ define(function(require, exports, module) {
     var spinMod = new Modifier({
         transform : function(){
             var spinDeg = .002 * (Date.now() - initialTime);
-            return Transform.rotate(viewDeg*Degree, 0, spinDeg);
+            return Transform.rotate(Math.PI/2, 0, spinDeg);
         }
     });
     var spinNode = mainContext.add(spinMod);
