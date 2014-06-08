@@ -7,3 +7,14 @@ html {
     -webkit-backface-visibility: visible;
     backface-visibility: visible;
 }
+
+.bon-surf {
+    background-color: rgba(255,255,0,0.8);
+    color: #2c2c2c;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 1px 1px 0px #a59bff;
+    text-shadow: 1px 1px #cfe2ea;
+    -webkit-backface-visibility: visible !important;
+    opacity: 0.8;
+}
