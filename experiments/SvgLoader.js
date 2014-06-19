@@ -29,9 +29,10 @@ define(function(require, exports, module) {
 
     SvgLoader.DEFAULT_OPTIONS = {
         size: [200, 150],
-        bound: 0.2,   // bound , the pic will appear 0.5 +/- bound
+        bound: 0,   // bound , the pic will appear 0.5 +/- bound
         surfacesNumber: 10,
-        timeInterval: 600
+        timeInterval: 1000,
+        zTranslate: 100
     };
 
     function _createViews() {
@@ -88,7 +89,6 @@ define(function(require, exports, module) {
             }
         }else{
             var interval = Math.floor(leafSVG.length / this.options.surfacesNumber);
-            console.log(interval);
             for(var i = 0; i < this.options.surfacesNumber; ++i){
                 leafSVG.css('opacity', 0);
                 for(var j = i * interval; j < (i+1) * interval; ++j){
@@ -108,11 +108,11 @@ define(function(require, exports, module) {
         this.memory[src] = surfaces;
         this.leafSurfaces = this.memory[src];
 
-        window.svg = this.svg;
-        window.svgContent = this.svgContent;
-        window.leafSVG = this.leafSVG;
-        window.memory = this.memory;
-        window.test = this;
+//        window.svg = this.svg;
+//        window.svgContent = this.svgContent;
+//        window.leafSVG = this.leafSVG;
+//        window.memory = this.memory;
+//        window.test = this;
     }
 
     function _getTag(leafSVG){
@@ -134,7 +134,7 @@ define(function(require, exports, module) {
                 });
                 this.add(mod).add(surf);
                 mod.setAlign([.5,.5], _.sample(this.transitions));
-                mod.setTransform(Transform.translate(0, 0 ,0));
+                mod.setTransform(Transform.translate(0, 0 ,this.options.zTranslate), _.sample(this.transitions));
             }.bind(this), index * this.options.timeInterval)
         }.bind(this))
     }
