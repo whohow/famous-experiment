@@ -7,13 +7,19 @@ define(function(require, exports, module) {
     var GridLayout = require("famous/views/GridLayout");
     require('../lib/jquery.min');
     require('../lib/underscore');
+    var Transitionable = require('famous/transitions/Transitionable');
+    var SpringTransition = require('famous/transitions/SpringTransition');
+    var Easing = require('famous/transitions/Easing');
 
-    var surfNum = 10
+    Transitionable.registerMethod('spring', SpringTransition);
+
+
 
     function SvgLoader(options) {
+        this.memory = {};
         this.options = options;
-
         View.apply(this, arguments);
+        _createTransitions.call(this);
         _createViews.call(this);
         _setListeners.call(this);
     }
@@ -22,146 +28,138 @@ define(function(require, exports, module) {
     SvgLoader.prototype.constructor = SvgLoader;
 
     SvgLoader.DEFAULT_OPTIONS = {
-        size: [400, 300]
+        size: [200, 150],
+        bound: 0.2,   // bound , the pic will appear 0.5 +/- bound
+        surfacesNumber: 10,
+        timeInterval: 600
     };
 
     function _createViews() {
         var src= this.options.src;
-        $.get(src, function(d){
-//            var s = new XMLSerializer();
-//            var zoom = this.options.size[0] / $(d).width();
-//            this.svgContent = s.serializeToString(d.querySelector('svg'));
-//            this.svgContent = $(this.svgContent).css('zoom',zoom)[0].outerHTML;
+        if(this.memory.src){
+            this.leafSurfaces = this.memory.src
+        }else{
+            _getSVG.call(this, src);
+            this.leafSurfaces = this.memory[src];
+        }
+    }
 
+    function _getSVG(src){
+        $.get(src, function(d){
             this.svg = $(d.querySelector('svg'));
+            this.svg.find('metadata').remove();
             var w = this.svg.attr('width');
             var h = this.svg.attr('height');
             if (w.indexOf('pt')>0) {
                 w = parseInt(w)*8/6;
                 h = parseInt(h)*8/6;
+            } else {
+                w = parseInt(w);
+                h = parseInt(h);
             }
-
-            this.svgContent = this.svg.attr({
+            this.svg.attr({
                 width: '100%',
                 height: '100%',
                 preserveAspectRatio: "xMinYMin meet",
                 viewBox: "0 0 " + w + " " + h
-            })[0].outerHTML;
-            window.svg = this.svg;
-            window.svgContent = this.svgContent;
-            var surfaces = [];
-            window.d = d;
-            $(d).find('metadata').remove();
-            this.svgLeaves = $(d).find('*:not(:has(*))');
-            //_createSurfaces(surfaces, d.children[0]);
-            _createLeafSurfaces.call(this);
-            window.surf = surfaces;
-            this.surfaces = surfaces;
+            });
+            this.svgContent = this.svg[0].outerHTML;
+            _createLeafSurfaces.call(this, src);
         }.bind(this));
-        this.firstSurface = new Surface({
-            content: 'hello world',
-            size: this.options.size,
-            properties: {
-                color: 'white',
-                textAlign: 'center',
-                backgroundColor: '#FA5C4F'
+    }
+
+
+
+    function _createLeafSurfaces(src){
+        var surfaces = [];
+        var use = this.svg.find('use');
+        var tags = _getTag(use);
+        var leafSVG = this.svg.find('*:not(:has(*))').not(tags.join(','));
+        if(leafSVG.length < this.options.surfacesNumber){
+            for(var i = 0; i < leafSVG.length; ++i){
+//            this.leafSVG.hide();
+//            $(this.leafSVG[i]).show();
+                leafSVG.css('opacity', 0);
+                $(leafSVG[i]).css('opacity', 1);
+                surfaces.push(new Surface({
+                    size: this.options.size,
+                    content: this.svg[0].outerHTML
+                }));
             }
-        });
-//        this.add(this.firstSurface);
-    }
-
-    function _createLeafSurfaces(){
-        this.leafSurfaces = [];
-        for(var i = 0; i < this.svgLeaves.length; ++i){
-            this.leafSurfaces.push(new Surface({
-                size: this.options.size,
-                content: this.svgContent
-            }));
-        }
-    }
-
-    function _getLeaf(d, leaf){
-        if(d.nodeName === 'metadata') return;
-        if(! d.hasOwnProperty('children') || d.children.length == 0){
-            $(d).hide();
-            leaf.push(d);
         }else{
-            _.each(d.children, function(child){
-                _getLeaf(child, leaf);
-            });
-        }
-    }
-
-    function _createSurfaces(surfaces, d){
-        var node = $(d).clone().context;
-        var leaf = [];
-        _getLeaf(node, leaf);
-        var num = surfNum;
-        if(leaf.length < surfNum) num = leaf.length;
-        var interval = Math.floor(leaf.length / num);
-        for(var i = 0; i < num; ++i){
-            surfaces.push(new Surface({
-                //size: [100,100]
-//                content: i+'',
-//                properties: {
-//                    color: 'white',
-//                    backgroundColor: "hsl(" + (i * 360 / 3) + ", 100%, 50%)"
-//                }
-            }));
-            _createSurf(d, surfaces, i, interval);
-        }
-    }
-
-    function _createSurf(d, surfaces, i, interval){
-        var node = d.cloneNode();
-        _copyTree(d, node)
-        //var context = node.context;
-        var leaf = [];
-        _getLeaf(node, leaf);
-        _show(leaf, i, interval);
-        //surfaces[i].setContent(node);
-    }
-
-    function _show(leaf, i, interval){
-        var start = i * interval;
-        var end = start + interval;
-        //console.log(start, end, '??????')
-        for(var j = start; j < end; ++j){
-            //console.log(j, leaf[j]);
-            $(leaf[j]).show();
-        }
-    }
-
-    function _copyTree(root, result){
-        if(d.nodeName === 'metadata') return;
-        if(! root.hasOwnProperty('children')){
-            return ;
-        }else {
-            _.each(root.children, function(child){
-                var next = child;
-                if(child.children.length === 0){
-                    next = child.cloneNode();
+            var interval = Math.floor(leafSVG.length / this.options.surfacesNumber);
+            console.log(interval);
+            for(var i = 0; i < this.options.surfacesNumber; ++i){
+                leafSVG.css('opacity', 0);
+                for(var j = i * interval; j < (i+1) * interval; ++j){
+                    $(leafSVG[j]).css('opacity', 1);
+                    if(i == this.options.surfacesNumber - 1) {
+                        while(j < leafSVG.length){
+                            $(leafSVG[j++]).css('opacity', 1);
+                        }
+                    }
                 }
-                result.append(next);
-                _copyTree(child, next);
-            });
+                surfaces.push(new Surface({
+                    size: this.options.size,
+                    content: this.svg[0].outerHTML
+                }));
+            }
         }
+        this.memory[src] = surfaces;
+        this.leafSurfaces = this.memory[src];
+
+        window.svg = this.svg;
+        window.svgContent = this.svgContent;
+        window.leafSVG = this.leafSVG;
+        window.memory = this.memory;
+        window.test = this;
+    }
+
+    function _getTag(leafSVG){
+        return  _.pluck(_.pluck(leafSVG.filter('use'), 'href'), 'baseVal');
     }
 
     function _setListeners() {
-        setTimeout(function(){
-//            $(surf[1]).css('zoom', '200%');
-            window.layout = new GridLayout({dimensions: [2,5]});
-//            console.log(surf);
-            window.layout.sequenceFrom(this.leafSurfaces);
-            this.add(window.layout);
-//            this.add(new StateModifier({
-//                size: [100, 100],
-//                origin: [.5,.2]
-//            })).add(surf[1])
-//            this.firstSurface.setContent(str);
-        }.bind(this), 1000);
 
+    }
+
+    SvgLoader.prototype.show = function(){
+        _.each(this.leafSurfaces, function(surf, index){
+            setTimeout(function(){
+                var x = _.sample([.5 + this.options.bound,.5 - this.options.bound,.5]);
+                var y = _.sample([.5 + this.options.bound,.5 - this.options.bound,.5]);
+                var mod =new StateModifier({
+                    origin: [.5,.5],
+                    align: [x, y]
+                });
+                this.add(mod).add(surf);
+                mod.setAlign([.5,.5], _.sample(this.transitions));
+                mod.setTransform(Transform.translate(0, 0 ,0));
+            }.bind(this), index * this.options.timeInterval)
+        }.bind(this))
+    }
+
+    function _createTransitions(){
+        this.transitions = [];
+        this.transitions.push({duration: 500, curve: Easing.inQuad});
+        this.transitions.push({duration: 500, curve: Easing.outQuad});
+        this.transitions.push({duration: 500, curve: Easing.inOutQuad});
+        this.transitions.push({duration: 500, curve: Easing.inCubic});
+        this.transitions.push({duration: 500, curve: Easing.outCubic});
+        this.transitions.push({duration: 500, curve: Easing.inOutCubic});
+        this.transitions.push({duration : 500, curve: Easing.inQuint });
+        this.transitions.push({duration : 500, curve: Easing.outQuint });
+        this.transitions.push({duration : 500, curve: Easing.inOutQuint });
+        this.transitions.push({duration: 500, curve: Easing.inElastic});
+        this.transitions.push({duration: 500, curve: Easing.outElastic});
+        this.transitions.push({duration: 500, curve: Easing.inOutElastic});
+        this.transitions.push({duration: 500, curve: Easing.inBounce});
+        this.transitions.push({duration: 500, curve: Easing.outBounce});
+        this.transitions.push({duration: 500, curve: Easing.inOutBounce});
+        this.transitions.push({duration: 500, curve: Easing.inBack});
+        this.transitions.push({duration: 500, curve: Easing.outBack});
+        this.transitions.push({duration: 500, curve: Easing.inOutBack});
+        //this.transitions.push({method: 'spring',period: 500, dampingRatio: 0.7});
     }
 
     module.exports = SvgLoader;
