@@ -22,7 +22,7 @@ define(function(require, exports, module) {
     SvgLoader.prototype.constructor = SvgLoader;
 
     SvgLoader.DEFAULT_OPTIONS = {
-        size: [200, 100]
+        size: [400, 300]
     };
 
     function _createViews() {
@@ -32,16 +32,27 @@ define(function(require, exports, module) {
 //            var zoom = this.options.size[0] / $(d).width();
 //            this.svgContent = s.serializeToString(d.querySelector('svg'));
 //            this.svgContent = $(this.svgContent).css('zoom',zoom)[0].outerHTML;
-            this.svgContent = $(d.querySelector('svg')).attr({
+
+            this.svg = $(d.querySelector('svg'));
+            var w = this.svg.attr('width');
+            var h = this.svg.attr('height');
+            if (w.indexOf('pt')>0) {
+                w = parseInt(w)*8/6;
+                h = parseInt(h)*8/6;
+            }
+
+            this.svgContent = this.svg.attr({
                 width: '100%',
                 height: '100%',
                 preserveAspectRatio: "xMinYMin meet",
-                viewBox: "0 0 " + this.options.size[0] + " " + this.options.size[1]
+                viewBox: "0 0 " + w + " " + h
             })[0].outerHTML;
+            window.svg = this.svg;
             window.svgContent = this.svgContent;
             var surfaces = [];
             window.d = d;
-            this.svgLeaves = $(d).find('svg>:not(metadata)').find('*:not(:has(*))');
+            $(d).find('metadata').remove();
+            this.svgLeaves = $(d).find('*:not(:has(*))');
             //_createSurfaces(surfaces, d.children[0]);
             _createLeafSurfaces.call(this);
             window.surf = surfaces;
@@ -64,11 +75,7 @@ define(function(require, exports, module) {
         for(var i = 0; i < this.svgLeaves.length; ++i){
             this.leafSurfaces.push(new Surface({
                 size: this.options.size,
-                content: this.svgContent,
-                properties: {
-                    color: 'white',
-                    backgroundColor: "hsl(" + (i * 360 / 3) + ", 100%, 50%)"
-                }
+                content: this.svgContent
             }));
         }
     }
@@ -144,7 +151,7 @@ define(function(require, exports, module) {
     function _setListeners() {
         setTimeout(function(){
 //            $(surf[1]).css('zoom', '200%');
-            window.layout = new GridLayout({dimensions: [5,1]});
+            window.layout = new GridLayout({dimensions: [2,5]});
 //            console.log(surf);
             window.layout.sequenceFrom(this.leafSurfaces);
             this.add(window.layout);
