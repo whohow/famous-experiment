@@ -16,7 +16,6 @@ define(function(require, exports, module) {
 
 
     function SvgLoader(options) {
-        this.memory = {};
         this.options = options;
         View.apply(this, arguments);
         _createTransitions.call(this);
@@ -29,23 +28,34 @@ define(function(require, exports, module) {
 
     SvgLoader.DEFAULT_OPTIONS = {
         size: [200, 150],
-        bound: 0,   // bound , the pic will appear 0.5 +/- bound
-        surfacesNumber: 10,
-        timeInterval: 1000,
-        zTranslate: 100
+        bound: 0.1,   // bound , the pic will appear 0.5 +/- bound
+        surfacesNumber: 15,
+        timeInterval: 600,
+        zTranslate: -100
     };
 
     function _createViews() {
-        var src= this.options.src;
-        if(this.memory.src){
-            this.leafSurfaces = this.memory.src
-        }else{
-            _getSVG.call(this, src);
-            this.leafSurfaces = this.memory[src];
+        this.showNumber = this.options.surfacesNumber;
+        this.surfaces = [];
+        this.mods = [];
+        for(var i = 0; i < this.options.surfacesNumber; ++i){
+            this.surfaces.push(new Surface({
+                size: this.options.size
+            }));
+            this.mods.push(new StateModifier({
+                origin:[.5,.5],
+                opacity : 0
+            }));
+            this.add(this.mods[i]).add(this.surfaces[i]);
         }
     }
 
-    function _getSVG(src){
+    SvgLoader.prototype.setContent = function(src, callback){
+        this.hide();
+        _getSVG.call(this, src, callback);
+    }
+
+    function _getSVG(src, callback){
         $.get(src, function(d){
             this.svg = $(d.querySelector('svg'));
             this.svg.find('metadata').remove();
@@ -58,34 +68,35 @@ define(function(require, exports, module) {
                 w = parseInt(w);
                 h = parseInt(h);
             }
+            if (!this.svg.attr('viewBox')) {
+                this.svg.attr('viewBox',"0 0 " + w + " " + h)
+            }
             this.svg.attr({
                 width: '100%',
                 height: '100%',
-                preserveAspectRatio: "xMinYMin meet",
-                viewBox: "0 0 " + w + " " + h
+                preserveAspectRatio: "xMinYMin meet"
             });
             this.svgContent = this.svg[0].outerHTML;
             _createLeafSurfaces.call(this, src);
+            this.show();
+            if (callback) callback.call(this);
         }.bind(this));
     }
 
 
 
     function _createLeafSurfaces(src){
-        var surfaces = [];
         var use = this.svg.find('use');
         var tags = _getTag(use);
         var leafSVG = this.svg.find('*:not(:has(*))').not(tags.join(','));
+        this.showNumber = leafSVG.length < this.options.surfacesNumber ? leafSVG.length: this.options.surfacesNumber
         if(leafSVG.length < this.options.surfacesNumber){
             for(var i = 0; i < leafSVG.length; ++i){
 //            this.leafSVG.hide();
 //            $(this.leafSVG[i]).show();
                 leafSVG.css('opacity', 0);
                 $(leafSVG[i]).css('opacity', 1);
-                surfaces.push(new Surface({
-                    size: this.options.size,
-                    content: this.svg[0].outerHTML
-                }));
+                this.surfaces[i].setContent(this.svg[0].outerHTML)
             }
         }else{
             var interval = Math.floor(leafSVG.length / this.options.surfacesNumber);
@@ -99,20 +110,14 @@ define(function(require, exports, module) {
                         }
                     }
                 }
-                surfaces.push(new Surface({
-                    size: this.options.size,
-                    content: this.svg[0].outerHTML
-                }));
+                this.surfaces[i].setContent(this.svg[0].outerHTML)
             }
         }
-        this.memory[src] = surfaces;
-        this.leafSurfaces = this.memory[src];
-
-//        window.svg = this.svg;
-//        window.svgContent = this.svgContent;
-//        window.leafSVG = this.leafSVG;
-//        window.memory = this.memory;
-//        window.test = this;
+        window.svg = this.svg;
+        window.svgContent = this.svgContent;
+        window.leafSVG = this.leafSVG;
+        window.memory = this.memory;
+        window.test = this;
     }
 
     function _getTag(leafSVG){
@@ -124,19 +129,20 @@ define(function(require, exports, module) {
     }
 
     SvgLoader.prototype.show = function(){
-        _.each(this.leafSurfaces, function(surf, index){
-            setTimeout(function(){
+        var index = 0;
+        this.interval = setInterval(function(){
                 var x = _.sample([.5 + this.options.bound,.5 - this.options.bound,.5]);
                 var y = _.sample([.5 + this.options.bound,.5 - this.options.bound,.5]);
-                var mod =new StateModifier({
-                    origin: [.5,.5],
-                    align: [x, y]
-                });
-                this.add(mod).add(surf);
-                mod.setAlign([.5,.5], _.sample(this.transitions));
-                mod.setTransform(Transform.translate(0, 0 ,this.options.zTranslate), _.sample(this.transitions));
-            }.bind(this), index * this.options.timeInterval)
-        }.bind(this))
+                this.mods[index].setAlign([x, y]);
+                this.mods[index].setOpacity(1);
+                this.mods[index].setAlign([.5,.5], _.sample(this.transitions));
+                this.mods[index].setTransform(Transform.translate(0, 0 ,this.options.zTranslate), _.sample(this.transitions));
+                ++index;
+                if(index >= this.showNumber){
+                    clearInterval(this.interval);
+                }
+        }.bind(this), this.options.timeInterval)
+
     }
 
     function _createTransitions(){
@@ -160,6 +166,20 @@ define(function(require, exports, module) {
         this.transitions.push({duration: 500, curve: Easing.outBack});
         this.transitions.push({duration: 500, curve: Easing.inOutBack});
         //this.transitions.push({method: 'spring',period: 500, dampingRatio: 0.7});
+    }
+
+//    SvgLoader.prototype.boom = function(){
+//        var angleInterval = Math.PI * 2 / this.leafSurfaces.length;
+//    }
+
+
+
+    SvgLoader.prototype.hide = function(){
+        _.each(_.range(this.showNumber), function(index){
+            this.surfaces[index].setContent('');
+            this.mods[index].setOpacity(0);
+        }.bind(this));
+        clearInterval(this.interval);
     }
 
     module.exports = SvgLoader;
