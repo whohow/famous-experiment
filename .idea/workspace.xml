@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="415c5514-c988-4ede-9024-4a4fa88ce606" name="Default" comment="added rotateWithTranlate.html&#10;">
+    <list default="true" id="415c5514-c988-4ede-9024-4a4fa88ce606" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../PageTransitions/css/animations.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../PageTransitions/js/pagetransitions.js" />
+    </list>
+    <list id="aa47d2ce-310b-49b4-992e-04deb781ce51" name="New changelist" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="famous-experiment.iws" />
     <ignored path=".idea/workspace.xml" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,48 +30,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main.js">
+      <file leaf-file-name="animations.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/animations.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="35" selection-start="3188" selection-end="3205" vertical-scroll-proportion="0.0" vertical-offset="836" max-vertical-offset="1875">
+            <state line="221" column="20" selection-start="5673" selection-end="5673" vertical-scroll-proportion="-3.1538463" vertical-offset="3233" max-vertical-offset="6045">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rotateWithoutTranlate.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rotateWithoutTranlate.html">
+      <file leaf-file-name="component.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../PageTransitions/css/component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="87" selection-start="583" selection-end="583" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="525">
+            <state line="48" column="10" selection-start="852" selection-end="852" vertical-scroll-proportion="-7.769231" vertical-offset="518" max-vertical-offset="3180">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rotateWithoutTranlate.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/experiments/rotateWithoutTranlate.js">
+      <file leaf-file-name="default.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../PageTransitions/css/default.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="32" selection-start="567" selection-end="567" vertical-scroll-proportion="-1.6153846" vertical-offset="198" max-vertical-offset="765">
+            <state line="5" column="20" selection-start="161" selection-end="164" vertical-scroll-proportion="-2.8846154" vertical-offset="0" max-vertical-offset="1650">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rotateWithTranslate.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/experiments/rotateWithTranslate.js">
+      <file leaf-file-name="multilevelmenu.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../PageTransitions/css/multilevelmenu.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.51861703" vertical-offset="240" max-vertical-offset="1140">
-              <folding>
-                <element signature="e#0#41#0" expanded="false" />
-              </folding>
+            <state line="53" column="8" selection-start="1134" selection-end="1137" vertical-scroll-proportion="-6.0384617" vertical-offset="638" max-vertical-offset="14415">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rotateWithTranslate.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rotateWithTranslate.html">
+      <file leaf-file-name="animations.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/animations.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="724" selection-end="724" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="540">
+            <state line="286" column="22" selection-start="7018" selection-end="7025" vertical-scroll-proportion="-9.71087" vertical-offset="8757" max-vertical-offset="19530">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scrollviewOutput.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/experiments/scrollviewOutput.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="0" selection-start="1450" selection-end="1450" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lightbox.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/experiments/Lightbox.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="115" column="28" selection-start="4301" selection-end="4301" vertical-scroll-proportion="-52.5" vertical-offset="360" max-vertical-offset="2100">
               <folding />
             </state>
           </provider>
@@ -89,13 +110,23 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/experiments/rotateWithoutTranlate.js" />
         <option value="$PROJECT_DIR$/experiments/rotateWithTranslate.js" />
+        <option value="$PROJECT_DIR$/slotMachine.html" />
+        <option value="$PROJECT_DIR$/experiments/SvgLoader.js" />
+        <option value="$PROJECT_DIR$/src/SvgTest.js" />
+        <option value="$PROJECT_DIR$/experiments/slotMachine.js" />
+        <option value="$PROJECT_DIR$/pageTransitions.html" />
+        <option value="$PROJECT_DIR$/experiments/scrollviewOutput.js" />
+        <option value="$PROJECT_DIR$/experiments/Lightbox.js" />
+        <option value="$PROJECT_DIR$/css/animations.css" />
+        <option value="$PROJECT_DIR$/experiments/pageTransitions.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="33" />
     <option name="y" value="22" />
-    <option name="width" value="1280" />
-    <option name="height" value="713" />
+    <option name="width" value="1440" />
+    <option name="height" value="874" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -123,7 +154,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -156,45 +186,172 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="famous-experiment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="famous-experiment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="SearchEverywhereHistory" value="" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="106" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="146" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="107" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="147" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="111" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="151" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="905" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="945" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="106" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="146" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="107" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="147" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="111" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="151" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="905" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="945" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/experiments" />
+      <recent name="$PROJECT_DIR$/css" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/css" />
+      <recent name="$PROJECT_DIR$/experiments" />
     </key>
   </component>
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/experiments/scrollviewOutput.js</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/scrollviewOutput.html</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
+  </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -205,15 +362,23 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -226,9 +391,27 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="415c5514-c988-4ede-9024-4a4fa88ce606" name="Default" comment="" />
+      <changelist id="aa47d2ce-310b-49b4-992e-04deb781ce51" name="New changelist" comment="" />
       <created>1401230093164</created>
       <updated>1401230093164</updated>
     </task>
@@ -244,31 +427,55 @@
       <created>1401295138221</created>
       <updated>1401295138221</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added rotateWithTranlate.html&#10;">
+      <created>1402038584991</created>
+      <updated>1402038584991</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added rotateWithTranlate.html&#10;">
+      <created>1403143447481</created>
+      <updated>1403143447481</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added rotateWithTranlate.html&#10;">
+      <created>1405405119619</created>
+      <updated>1405405119619</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added pageTransition.html&#10;">
+      <created>1405452727562</created>
+      <updated>1405452727562</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added rotateWithTranlate.html&#10;">
+      <created>1405452817814</created>
+      <updated>1405452817814</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added rotateWithTranlate.html&#10;">
+      <created>1405452843136</created>
+      <updated>1405452843136</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="713" extended-state="0" />
-    <editor active="true" />
+    <frame x="33" y="22" width="1440" height="874" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992327" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32608697" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962668" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2642706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32850242" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32736573" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -285,12 +492,133 @@
     </option>
     <MESSAGE value="added rotateWithoutTranlate.html" />
     <MESSAGE value="added rotateWithoutTranlate.html&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="added rotateWithoutTranlate.html&#10;" />
+    <MESSAGE value="added pageTransition.html&#10;" />
+    <MESSAGE value="added rotateWithTranlate.html&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="added rotateWithTranlate.html&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/experiments/rotateWithTranslate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="7" selection-start="1189" selection-end="1189" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/slotMachine.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="77" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/buy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/SvgLoader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="31" selection-start="2554" selection-end="2554" vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="2865">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SvgTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="45" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="570">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rotateWithTranslate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="110" column="35" selection-start="3188" selection-end="3205" vertical-scroll-proportion="0.0" vertical-offset="836" max-vertical-offset="1875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rotateWithoutTranlate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="45" selection-start="1168" selection-end="1179" vertical-scroll-proportion="0.0" vertical-offset="73" max-vertical-offset="525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/rotateWithoutTranlate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="32" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/rotateWithTranslate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="7" selection-start="1189" selection-end="1189" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/slotMachine.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="17" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rotateWithTranslate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="110" column="35" selection-start="3188" selection-end="3205" vertical-scroll-proportion="0.0" vertical-offset="836" max-vertical-offset="1875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rotateWithoutTranlate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="87" selection-start="583" selection-end="583" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/rotateWithoutTranlate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="32" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/rotateWithTranslate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rotateWithTranslate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="110" column="35" selection-start="3188" selection-end="3205" vertical-scroll-proportion="0.0" vertical-offset="836" max-vertical-offset="1875">
@@ -354,33 +682,178 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rotateWithoutTranlate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="87" selection-start="583" selection-end="583" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="525">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/experiments/rotateWithoutTranlate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="32" selection-start="567" selection-end="567" vertical-scroll-proportion="-1.6153846" vertical-offset="198" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rotateWithTranslate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="724" selection-end="724" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="540">
+        <state line="16" column="32" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/experiments/rotateWithTranslate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.51861703" vertical-offset="240" max-vertical-offset="1140">
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
+        <state line="33" column="7" selection-start="1189" selection-end="1189" vertical-scroll-proportion="0.0" vertical-offset="363" max-vertical-offset="1140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rotateWithTranslate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="724" selection-end="724" vertical-scroll-proportion="0.27521008" vertical-offset="64" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/buy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SvgLoader.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="13" selection-start="1220" selection-end="1220" vertical-scroll-proportion="0.6674058" vertical-offset="89" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SvgTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="45" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/SvgLoader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="31" selection-start="2554" selection-end="2554" vertical-scroll-proportion="0.448" vertical-offset="901" max-vertical-offset="2865">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HangingSurface.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rotateWithoutTranlate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="348" selection-end="348" vertical-scroll-proportion="-3.9583333" vertical-offset="25" max-vertical-offset="525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/slotMachine.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="66" selection-start="293" selection-end="293" vertical-scroll-proportion="-2.0" vertical-offset="42" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/slotMachine.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="27" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageTransitions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="23" selection-start="317" selection-end="317" vertical-scroll-proportion="-2.6666667" vertical-offset="41" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PageTransitions/css/animations.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="19530">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PageTransitions/js/pagetransitions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1365" max-vertical-offset="6045">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PageTransitions/js/jquery.dlmenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="6" selection-start="431" selection-end="431" vertical-scroll-proportion="-0.26804122" vertical-offset="295" max-vertical-offset="3720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PageTransitions/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="68" selection-start="4842" selection-end="4846" vertical-scroll-proportion="-2.9" vertical-offset="1310" max-vertical-offset="2760">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrollviewOutput.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="50" selection-start="423" selection-end="423" vertical-scroll-proportion="-3.875" vertical-offset="42" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/Lightbox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="28" selection-start="4301" selection-end="4301" vertical-scroll-proportion="-52.5" vertical-offset="360" max-vertical-offset="2100">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/pageTransitions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="163" column="38" selection-start="5642" selection-end="5654" vertical-scroll-proportion="0.45974576" vertical-offset="2228" max-vertical-offset="2700">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/scrollviewOutput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="1450" selection-end="1450" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/animations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="221" column="20" selection-start="5673" selection-end="5673" vertical-scroll-proportion="-3.1538463" vertical-offset="3233" max-vertical-offset="6045">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PageTransitions/css/multilevelmenu.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="8" selection-start="1134" selection-end="1137" vertical-scroll-proportion="-6.0384617" vertical-offset="638" max-vertical-offset="14415">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PageTransitions/css/default.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="20" selection-start="161" selection-end="164" vertical-scroll-proportion="-2.8846154" vertical-offset="0" max-vertical-offset="1650">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PageTransitions/css/component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="10" selection-start="852" selection-end="852" vertical-scroll-proportion="-7.769231" vertical-offset="518" max-vertical-offset="3180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/animations.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="286" column="22" selection-start="7018" selection-end="7025" vertical-scroll-proportion="-9.71087" vertical-offset="8757" max-vertical-offset="19530">
+          <folding />
         </state>
       </provider>
     </entry>
