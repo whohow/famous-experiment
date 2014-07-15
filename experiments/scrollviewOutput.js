@@ -5,24 +5,26 @@ define(function(require, exports, module) {
     var Scrollview = require('famous/views/Scrollview');
     var StateModifier = require('famous/modifiers/StateModifier');
     var ViewSequence = require('famous/core/ViewSequence');
+    var Utility = require('famous/utilities/Utility');
 
     var mainContext = Engine.createContext();
     mainContext.setPerspective(500);
 
     var surfaces = [];
     var scrollview = new Scrollview({
-        margin: 180
+        direction: Utility.Direction.X,
+        margin: 100
     });
 
     Engine.pipe(scrollview);
 
     var viewSequence = new ViewSequence({
         array: surfaces,
-        loop: true
+        loop: false
     });
     scrollview.sequenceFrom(viewSequence);
 
-    var size = [300, 100];
+    var size = [300, 300];
 
     var centerModifier = new StateModifier({
         size: size,
@@ -32,7 +34,7 @@ define(function(require, exports, module) {
 
     mainContext.add(centerModifier).add(scrollview);
 
-    for (var i = 0; i < 40; i++) {
+    for (var i = 0; i < 5; i++) {
         var surface = new Surface({
             size: size,
             content: 'Surface ' + i,
@@ -48,7 +50,21 @@ define(function(require, exports, module) {
         surfaces.push(surface);
     }
 
-    scrollview.outputFrom(function(offset) {
-        return Transform.moveThen([0, -50, 350], Transform.rotateX(-0.004 * offset));
-    });
+    window.scrollview = scrollview;
+    window.Transform = Transform;
+    window.scrollToPage = function(pageIndex){
+        var curIndex = this.scrollview._node.getIndex();
+        var diff =  pageIndex - curIndex;
+        if(diff > 0){
+            while(diff !== 0){
+                this.scrollview.goToNextPage();
+                diff--;
+            }
+        }else if(diff < 0){
+            while(diff !== 0){
+                this.scrollview.goToPreviousPage();
+                diff++;
+            }
+        }
+    }
 });

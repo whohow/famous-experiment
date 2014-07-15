@@ -67,5 +67,6 @@ define(function(require, exports, module) {
     }
     Timer.every(f, 100);
 
+    window.scrollview = scrollview;
 
 });
